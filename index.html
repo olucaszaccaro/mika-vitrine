@@ -95,6 +95,14 @@
   .modal button{border:none;font:inherit;font-weight:700;border-radius:12px;padding:13px;cursor:pointer}
   .modal .copy{background:var(--mag);color:#fff}
   .modal .close{background:#F6E9F0;color:var(--plum)}
+
+  /* animated pointer toward the ••• menu (top-right) */
+  .pointer{display:flex;justify-content:flex-end;margin:0 4px 4px}
+  .pointer svg{width:54px;height:54px;color:var(--mag);animation:point 1s ease-in-out infinite}
+  .iab .pointer{margin:8px 2px 0}
+  .iab .pointer svg{width:40px;height:40px;color:var(--gold)}
+  @keyframes point{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-10px)}}
+  @media(prefers-reduced-motion:reduce){.pointer svg{animation:none}}
 </style>
 </head>
 <body>
@@ -149,6 +157,9 @@
   <!-- iOS open-in-browser modal -->
   <div class="overlay" id="overlay">
     <div class="modal">
+      <div class="pointer" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg>
+      </div>
       <h3>Abra no navegador 💛</h3>
       <p>O Instagram bloqueia a abertura de lojas e apps. É rapidinho:</p>
       <div class="tipbox" id="modalTip"></div>
@@ -192,7 +203,7 @@
       if(isIOS){
         document.getElementById('iabBtn').style.display='none';
         steps.style.display='block';
-        steps.innerHTML = 'Toque em <b>•••</b> no canto superior direito e escolha <b>“Abrir no navegador”</b> (Safari/Chrome).';
+        steps.innerHTML = '<div class="pointer" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg></div>Toque em <b>•••</b> no canto superior direito e escolha <b>“Abrir no navegador”</b> (Safari/Chrome).';
       } else {
         document.getElementById('iabBtn').onclick = ()=> openExternal(SELF);
       }
