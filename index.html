@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mika Indica · Vitrine de Achadinhos</title>
-<meta name="description" content="Os achadinhos que a Mika indica — beleza, casa e roupas com o melhor preço. Toque e compre com segurança." />
+<title>Mika Indica · Achadinhos e Grupo de Ofertas</title>
+<meta name="description" content="Entre no grupo VIP de ofertas da Mika e receba cupons e achadinhos de beleza, casa e roupas todo dia. Veja também os produtos que a Mika indica." />
 <meta name="theme-color" content="#5B1E45" />
 <link rel="icon" href="logo.png" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Mika Indica · Vitrine de Achadinhos" />
-<meta property="og:description" content="Beleza, casa e roupas com o melhor preço — toque e compre." />
+<meta property="og:title" content="Mika Indica · Grupo de Ofertas + Achadinhos" />
+<meta property="og:description" content="Cupons e promoções relâmpago todo dia. Entra no grupo!" />
 <meta property="og:image" content="logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,19 +18,19 @@
   :root{
     --plum:#5B1E45; --mag:#E64A86; --coral:#FF7E6B; --cream:#FFF6EF; --paper:#fff;
     --gold:#F4C24B; --ink:#34232E; --muted:#8a7681;
-    --beleza:#E64A86; --casa:#2FA98E; --roupas:#7B5BD6; --outros:#8a7681; --wa:#1FBA57;
+    --beleza:#E64A86; --casa:#2FA98E; --roupas:#7B5BD6; --outros:#8a7681;
+    --wa:#25D366; --wa-dark:#128C7E;
     --shadow:0 10px 30px rgba(91,30,69,.12);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);
     background:radial-gradient(1100px 460px at 50% -10%, rgba(230,74,134,.16), transparent 60%), var(--cream);
     min-height:100vh;line-height:1.45}
-  .wrap{max-width:720px;margin:0 auto;padding:18px 16px 60px}
+  .wrap{max-width:720px;margin:0 auto;padding:16px 16px 130px}
   a{color:inherit;text-decoration:none}
 
   /* in-app browser banner */
-  .iab{display:none;background:var(--plum);color:#fff;border-radius:14px;padding:13px 14px;margin-bottom:14px;
-    box-shadow:var(--shadow)}
+  .iab{display:none;background:var(--plum);color:#fff;border-radius:14px;padding:13px 14px;margin-bottom:14px;box-shadow:var(--shadow)}
   .iab.show{display:block}
   .iab .h{font-weight:700;font-size:14px;display:flex;gap:8px;align-items:center}
   .iab p{font-size:12.5px;opacity:.92;margin:6px 0 0;line-height:1.4}
@@ -39,53 +39,70 @@
   .iab .steps{background:rgba(255,255,255,.12);border-radius:10px;padding:9px 11px;margin-top:10px;font-size:12.5px}
 
   /* header */
-  .top{display:flex;align-items:center;gap:12px;justify-content:center;flex-direction:column;text-align:center;padding:6px 0 6px}
-  .logo{width:92px;height:92px;border-radius:24px;box-shadow:var(--shadow)}
-  .name{font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--plum);line-height:1}
-  .tag{font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--mag);font-weight:600;margin-top:4px}
-  .socials{display:flex;gap:9px;justify-content:center;margin-top:12px;flex-wrap:wrap}
-  .soc{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border-radius:999px;padding:9px 15px;
+  .top{text-align:center;padding:8px 0 2px}
+  .logo{width:84px;height:84px;border-radius:22px;box-shadow:var(--shadow)}
+  .name{font-family:'Fraunces',serif;font-weight:600;font-size:28px;color:var(--plum);line-height:1;margin-top:8px}
+  .tag{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--mag);font-weight:600;margin-top:4px}
+
+  /* HERO whatsapp */
+  .hero{margin-top:16px;border-radius:22px;padding:22px 20px;text-align:center;color:#fff;
+    background:linear-gradient(135deg,var(--wa-dark),var(--wa));box-shadow:0 14px 34px rgba(18,140,126,.34);position:relative;overflow:hidden}
+  .hero .kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.92}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:27px;line-height:1.12;margin:6px 0 6px}
+  .hero p{font-size:14.5px;opacity:.96;max-width:24em;margin:0 auto 16px}
+  .hero .cta{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--wa-dark);
+    font-weight:700;font-size:18px;padding:16px;border-radius:14px;box-shadow:0 8px 18px rgba(0,0,0,.16);transition:transform .12s}
+  .hero .cta:hover{transform:translateY(-2px)}
+  .hero .cta svg{width:24px;height:24px}
+  .hero .free{font-size:12.5px;opacity:.9;margin-top:10px}
+
+  /* secondary socials */
+  .socials{display:flex;gap:9px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+  .soc{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border-radius:999px;padding:8px 15px;
     font-size:13px;font-weight:600;box-shadow:0 3px 12px rgba(91,30,69,.08)}
   .soc svg{width:16px;height:16px}
-  .soc.wa{background:var(--wa);color:#fff}
 
-  /* filter chips */
-  .filters{display:flex;gap:8px;overflow-x:auto;padding:18px 2px 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  /* products */
+  .sec{display:flex;align-items:baseline;justify-content:space-between;margin:26px 2px 2px}
+  .sec h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:var(--plum)}
+  .sec span{font-size:12.5px;color:var(--muted)}
+  .filters{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
   .chip{white-space:nowrap;border:1.5px solid #EAD7E1;background:var(--paper);color:var(--ink);
     border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px;cursor:pointer;transition:.15s}
   .chip[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
-
-  /* grid */
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
   @media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
-  .card{background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
-    transition:transform .14s ease}
+  .card{background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .14s}
   .card:hover{transform:translateY(-3px)}
   .thumb{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,#F7E7EF,#FBF1E9);overflow:hidden}
   .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .ph{width:100%;height:100%;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:34px;color:#fff}
-  .badge{position:absolute;top:8px;left:8px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#fff;
-    padding:4px 9px;border-radius:999px;text-transform:uppercase}
-  .body{padding:11px 12px 13px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .badge{position:absolute;top:8px;left:8px;font-size:11px;font-weight:700;color:#fff;padding:4px 9px;border-radius:999px;text-transform:uppercase}
+  .cbody{padding:11px 12px 13px;display:flex;flex-direction:column;gap:8px;flex:1}
   .title{font-size:13.5px;font-weight:600;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
   .price{font-weight:700;color:var(--mag);font-size:16px}
-  .price small{color:var(--muted);font-weight:500;font-size:12px;text-decoration:line-through;margin-left:6px}
-  .go{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--plum);color:#fff;
-    font-weight:600;font-size:13.5px;padding:10px;border-radius:11px;cursor:pointer}
+  .go{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--plum);color:#fff;font-weight:600;font-size:13.5px;padding:10px;border-radius:11px;cursor:pointer}
   .go:hover{background:#4a1739}
-
-  .empty{text-align:center;color:var(--muted);padding:60px 20px}
-  .empty .big{font-family:'Fraunces',serif;font-size:22px;color:var(--plum);margin-bottom:6px}
-  .skeleton{height:210px;border-radius:18px;background:linear-gradient(100deg,#f3e7ee 30%,#faf1e9 50%,#f3e7ee 70%);
-    background-size:200% 100%;animation:sh 1.2s linear infinite}
+  .empty{text-align:center;color:var(--muted);padding:44px 20px}
+  .empty .big{font-family:'Fraunces',serif;font-size:20px;color:var(--plum);margin-bottom:6px}
+  .skeleton{height:210px;border-radius:18px;background:linear-gradient(100deg,#f3e7ee 30%,#faf1e9 50%,#f3e7ee 70%);background-size:200% 100%;animation:sh 1.2s linear infinite}
   @keyframes sh{to{background-position:-200% 0}}
-  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:34px}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:30px}
   footer a{color:var(--mag);font-weight:600}
   a:focus-visible,.chip:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
 
-  /* modal (iOS open-in-browser) */
-  .overlay{position:fixed;inset:0;background:rgba(52,35,46,.55);display:none;align-items:center;justify-content:center;padding:22px;z-index:50}
+  /* sticky whatsapp bar */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:center;
+    padding:12px 14px calc(12px + env(safe-area-inset-bottom));
+    background:linear-gradient(180deg,rgba(255,246,239,0),var(--cream) 40%);transform:translateY(120%);transition:transform .25s ease}
+  .sticky.show{transform:translateY(0)}
+  .sticky a{max-width:480px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--wa);color:#fff;font-weight:700;font-size:17px;padding:15px;border-radius:14px;box-shadow:0 10px 24px rgba(37,211,102,.45)}
+  .sticky svg{width:23px;height:23px}
+
+  /* modal + pointer */
+  .overlay{position:fixed;inset:0;background:rgba(52,35,46,.55);display:none;align-items:center;justify-content:center;padding:22px;z-index:60}
   .overlay.show{display:flex}
   .modal{background:var(--paper);border-radius:20px;max-width:360px;width:100%;padding:22px;box-shadow:var(--shadow);text-align:center}
   .modal h3{font-family:'Fraunces',serif;color:var(--plum);font-size:20px;margin-bottom:8px}
@@ -95,14 +112,12 @@
   .modal button{border:none;font:inherit;font-weight:700;border-radius:12px;padding:13px;cursor:pointer}
   .modal .copy{background:var(--mag);color:#fff}
   .modal .close{background:#F6E9F0;color:var(--plum)}
-
-  /* animated pointer toward the ••• menu (top-right) */
   .pointer{display:flex;justify-content:flex-end;margin:0 4px 4px}
   .pointer svg{width:54px;height:54px;color:var(--mag);animation:point 1s ease-in-out infinite}
   .iab .pointer{margin:8px 2px 0}
   .iab .pointer svg{width:40px;height:40px;color:var(--gold)}
   @keyframes point{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-10px)}}
-  @media(prefers-reduced-motion:reduce){.pointer svg{animation:none}}
+  @media (prefers-reduced-motion: reduce){.pointer svg{animation:none}}
 </style>
 </head>
 <body>
@@ -115,27 +130,35 @@
     </div>
 
     <header class="top">
-      <img class="logo" src="logo.png" width="92" height="92" alt="Mika Indica" />
-      <div>
-        <div class="name">Mika Indica</div>
-        <div class="tag">Beleza · Casa · Roupas</div>
-      </div>
-      <nav class="socials" aria-label="Redes sociais">
-        <a class="soc wa" href="https://chat.whatsapp.com/CAkrHllqbfqAuc0TExuCph" target="_blank" rel="noopener">
-          <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
-          Grupo de ofertas
-        </a>
-        <a class="soc" style="color:var(--mag)" href="https://instagram.com/mikaela_zaccarosantana" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.43.4.69.83.91 1.4.17.43.36 1.07.42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.43-.83.69-1.4.91-.43.17-1.07.36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.43-.4-.69-.83-.91-1.4-.17-.43-.36-1.07-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.43.83-.69 1.4-.91.43-.17 1.07-.36 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 3.5A6.3 6.3 0 1 0 18.3 12 6.3 6.3 0 0 0 12 5.7zm0 10.4A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1zm6.5-10.9a1.47 1.47 0 1 0 1.48 1.47 1.47 1.47 0 0 0-1.48-1.47z"/></svg>
-          Instagram
-        </a>
-        <a class="soc" href="https://tiktok.com/@mika_1ndica" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.5c-1.3.1-2.5-.3-3.6-1v5.9c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.07v2.6a3.4 3.4 0 1 0 2.5 3.3V3h2.2z"/></svg>
-          TikTok
-        </a>
-      </nav>
+      <img class="logo" src="logo.png" width="84" height="84" alt="Mika Indica" />
+      <div class="name">Mika Indica</div>
+      <div class="tag">Beleza · Casa · Roupas</div>
     </header>
 
+    <!-- HERO: grupo do WhatsApp -->
+    <section class="hero">
+      <div class="kicker">Grupo VIP de ofertas</div>
+      <h1>Cupons e achadinhos<br>todo dia no seu Zap</h1>
+      <p>Entre no grupo e receba as promoções relâmpago e os cupons exclusivos antes de todo mundo. 💛</p>
+      <a class="cta" href="https://chat.whatsapp.com/CAkrHllqbfqAuc0TExuCph" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+        ENTRAR NO GRUPO GRÁTIS
+      </a>
+      <div class="free">É grátis · sem spam · saia quando quiser</div>
+    </section>
+
+    <nav class="socials" aria-label="Redes sociais">
+      <a class="soc" style="color:var(--mag)" href="https://instagram.com/mikaela_zaccarosantana" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.43.4.69.83.91 1.4.17.43.36 1.07.42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.43-.83.69-1.4.91-.43.17-1.07.36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.43-.4-.69-.83-.91-1.4-.17-.43-.36-1.07-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.43.83-.69 1.4-.91.43-.17 1.07-.36 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 3.5A6.3 6.3 0 1 0 18.3 12 6.3 6.3 0 0 0 12 5.7zm0 10.4A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1zm6.5-10.9a1.47 1.47 0 1 0 1.48 1.47 1.47 1.47 0 0 0-1.48-1.47z"/></svg>
+        Instagram
+      </a>
+      <a class="soc" href="https://tiktok.com/@mika_1ndica" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.5c-1.3.1-2.5-.3-3.6-1v5.9c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.07v2.6a3.4 3.4 0 1 0 2.5 3.3V3h2.2z"/></svg>
+        TikTok
+      </a>
+    </nav>
+
+    <div class="sec"><h2>Achadinhos que eu indico</h2><span>toque e compre</span></div>
     <div class="filters" id="filters" role="tablist" aria-label="Categorias">
       <button class="chip" data-cat="Todos" aria-pressed="true">Todos</button>
       <button class="chip" data-cat="Beleza" aria-pressed="false">Beleza</button>
@@ -143,23 +166,23 @@
       <button class="chip" data-cat="Roupas" aria-pressed="false">Roupas</button>
       <button class="chip" data-cat="Outros" aria-pressed="false">Outros</button>
     </div>
-
     <section class="grid" id="grid" aria-live="polite">
       <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
     </section>
 
-    <footer>
-      Mika Indica · achadinhos com carinho 💛<br />
-      <a href="admin.html">Área da Mika</a>
-    </footer>
+    <footer>Mika Indica · achadinhos com carinho 💛<br /><a href="admin.html">Área da Mika</a></footer>
   </main>
 
-  <!-- iOS open-in-browser modal -->
+  <div class="sticky" id="sticky">
+    <a href="https://chat.whatsapp.com/CAkrHllqbfqAuc0TExuCph" target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+      Entrar no grupo de ofertas
+    </a>
+  </div>
+
   <div class="overlay" id="overlay">
     <div class="modal">
-      <div class="pointer" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg>
-      </div>
+      <div class="pointer" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg></div>
       <h3>Abra no navegador 💛</h3>
       <p>O Instagram bloqueia a abertura de lojas e apps. É rapidinho:</p>
       <div class="tipbox" id="modalTip"></div>
@@ -172,103 +195,72 @@
 
   <script type="module">
     import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-    const SUPA_URL = 'https://fgkpejrdarcusrdmpknl.supabase.co';
-    const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZna3BlanJkYXJjdXNyZG1wa25sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMxMDczNjcsImV4cCI6MjA5ODY4MzM2N30.qJaJAMPd5BCOWPCkK6pseiogJX3fsAsCQSQ6M0XgDBI';
+    const SUPA_URL = 'https://achisyshrzyuxvuvsqog.supabase.co';
+    const SUPA_KEY = 'sb_publishable_8otudPOgBQVRQ4-6dfm60w_eRebH1bW';
     const sb = createClient(SUPA_URL, SUPA_KEY);
     const CATCOLOR = { Beleza:'var(--beleza)', Casa:'var(--casa)', Roupas:'var(--roupas)', Outros:'var(--outros)' };
     const grid = document.getElementById('grid');
     let all = [], filter = 'Todos';
 
-    /* ---------- in-app browser handling ---------- */
+    /* in-app browser */
     const UA = navigator.userAgent || '';
     const inApp = /Instagram|FBAN|FBAV|FB_IAB|FBIOS|musical_ly|TikTok|Bytedance|Snapchat|Line\//i.test(UA);
-    const isAndroid = /Android/i.test(UA);
-    const isIOS = /iPhone|iPad|iPod/i.test(UA);
+    const isAndroid = /Android/i.test(UA), isIOS = /iPhone|iPad|iPod/i.test(UA);
     const SELF = location.href;
-
     function openExternal(url){
-      // Android: hand off to Chrome via intent (escapes the in-app webview)
       if(isAndroid){
         const noScheme = url.replace(/^https?:\/\//,'');
         window.location.href = 'intent://'+noScheme+'#Intent;scheme=https;package=com.android.chrome;end';
         setTimeout(()=>{ try{ window.open(url,'_blank'); }catch(e){} window.location.href = url; }, 1400);
         return true;
       }
-      return false; // iOS handled via modal
+      return false;
     }
-
     if(inApp){
-      const iab = document.getElementById('iab'); iab.classList.add('show');
-      const steps = document.getElementById('iabSteps');
-      if(isIOS){
-        document.getElementById('iabBtn').style.display='none';
-        steps.style.display='block';
-        steps.innerHTML = '<div class="pointer" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg></div>Toque em <b>•••</b> no canto superior direito e escolha <b>“Abrir no navegador”</b> (Safari/Chrome).';
-      } else {
-        document.getElementById('iabBtn').onclick = ()=> openExternal(SELF);
-      }
+      const iab=document.getElementById('iab'); iab.classList.add('show');
+      const steps=document.getElementById('iabSteps');
+      const arrow='<div class="pointer" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L33 15"/><path d="M20 14 H34 V28"/></svg></div>';
+      if(isIOS){ document.getElementById('iabBtn').style.display='none'; steps.style.display='block';
+        steps.innerHTML = arrow+'Toque em <b>•••</b> no canto superior direito e escolha <b>“Abrir no navegador”</b> (Safari/Chrome).'; }
+      else { document.getElementById('iabBtn').onclick=()=>openExternal(SELF); }
     }
-
-    // iOS modal
-    let modalUrl = '';
-    const overlay = document.getElementById('overlay');
-    document.getElementById('modalTip').innerHTML = 'Toque em <b>•••</b> (canto superior direito) → <b>“Abrir no navegador”</b>.<br>Ou copie o link e cole no Safari/TikTok.';
-    function showModal(url){ modalUrl = url; overlay.classList.add('show'); }
-    document.getElementById('closeBtn').onclick = ()=> overlay.classList.remove('show');
-    overlay.addEventListener('click', e=>{ if(e.target===overlay) overlay.classList.remove('show'); });
-    document.getElementById('copyBtn').onclick = async ()=>{
-      try{ await navigator.clipboard.writeText(modalUrl); document.getElementById('copyBtn').textContent='Link copiado! ✓'; }
-      catch(e){ document.getElementById('copyBtn').textContent='Copie manualmente 👇'; prompt('Copie o link:', modalUrl); }
-    };
+    let modalUrl='';
+    const overlay=document.getElementById('overlay');
+    document.getElementById('modalTip').innerHTML='Toque em <b>•••</b> (canto superior direito) → <b>“Abrir no navegador”</b>.<br>Ou copie o link e cole no Safari/TikTok.';
+    document.getElementById('closeBtn').onclick=()=>overlay.classList.remove('show');
+    overlay.addEventListener('click',e=>{ if(e.target===overlay) overlay.classList.remove('show'); });
+    document.getElementById('copyBtn').onclick=async()=>{ try{ await navigator.clipboard.writeText(modalUrl); document.getElementById('copyBtn').textContent='Link copiado! ✓'; }catch(e){ prompt('Copie o link:', modalUrl); } };
 
     function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-
     function card(p){
-      const color = CATCOLOR[p.category] || 'var(--outros)';
+      const color = CATCOLOR[p.category]||'var(--outros)';
       const img = p.image_url
         ? `<img src="${esc(p.image_url)}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<div class=\\'ph\\' style=\\'background:${color}\\'>${esc((p.title||'?')[0].toUpperCase())}</div>')" />`
         : `<div class="ph" style="background:${color}">${esc((p.title||'?')[0].toUpperCase())}</div>`;
       const price = p.price ? `<div class="price">${esc(p.price)}</div>` : '';
-      return `<article class="card">
-        <div class="thumb"><span class="badge" style="background:${color}">${esc(p.category)}</span>${img}</div>
-        <div class="body">
-          <div class="title">${esc(p.title)}</div>
-          ${price}
-          <a class="go" href="${esc(p.url)}" target="_blank" rel="noopener">Ver produto ›</a>
-        </div>
-      </article>`;
+      return `<article class="card"><div class="thumb"><span class="badge" style="background:${color}">${esc(p.category)}</span>${img}</div>
+        <div class="cbody"><div class="title">${esc(p.title)}</div>${price}
+        <a class="go" href="${esc(p.url)}" target="_blank" rel="noopener">Ver produto ›</a></div></article>`;
     }
-
     function render(){
       const list = filter==='Todos' ? all : all.filter(p=>p.category===filter);
-      if(!list.length){
-        grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="big">Em breve, achadinhos aqui ✨</div>Volte já já — a Mika está garimpando as melhores ofertas.</div>`;
-        return;
-      }
+      if(!list.length){ grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="big">Em breve, achadinhos aqui ✨</div>Enquanto isso, entra no grupo pra não perder as ofertas!</div>`; return; }
       grid.innerHTML = list.map(card).join('');
     }
+    grid.addEventListener('click',(e)=>{ const a=e.target.closest('.go'); if(!a||!inApp) return; const url=a.getAttribute('href');
+      if(isAndroid){ e.preventDefault(); openExternal(url); } else if(isIOS){ e.preventDefault(); modalUrl=url; overlay.classList.add('show'); } });
+    document.getElementById('filters').addEventListener('click',e=>{ const b=e.target.closest('.chip'); if(!b) return; filter=b.dataset.cat;
+      document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c===b)); render(); });
 
-    // intercept product clicks inside in-app browsers
-    grid.addEventListener('click', (e)=>{
-      const a = e.target.closest('.go'); if(!a || !inApp) return;
-      const url = a.getAttribute('href');
-      if(isAndroid){ e.preventDefault(); openExternal(url); }
-      else if(isIOS){ e.preventDefault(); showModal(url); }
-    });
+    /* sticky whatsapp bar appears after hero scrolls away */
+    const hero=document.querySelector('.hero'), sticky=document.getElementById('sticky');
+    new IntersectionObserver(([e])=>{ sticky.classList.toggle('show', !e.isIntersecting); }, {threshold:0}).observe(hero);
 
-    document.getElementById('filters').addEventListener('click', e=>{
-      const b = e.target.closest('.chip'); if(!b) return;
-      filter = b.dataset.cat;
-      document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c===b));
-      render();
-    });
-
-    (async ()=>{
+    (async()=>{
       const { data, error } = await sb.from('products').select('*').eq('active',true)
         .order('sort_order',{ascending:false}).order('created_at',{ascending:false});
       if(error){ grid.innerHTML = `<div class="empty" style="grid-column:1/-1">Não foi possível carregar agora. Tente atualizar.</div>`; return; }
-      all = data || [];
-      render();
+      all = data||[]; render();
     })();
   </script>
 </body>
